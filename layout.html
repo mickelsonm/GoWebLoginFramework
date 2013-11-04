@@ -28,22 +28,24 @@
     					<a class="navbar-brand"><img src="/img/logo.png" alt="CURT Manufacturing, LLC"></a>
     					<p class="navbar-text">Web Framework</p>
   					</div>
-
+  					{{with .LoggedIn}}
   					<div class="collapse navbar-collapse navbar-ex1-collapse">
   						<ul class="nav navbar-nav navbar-right">
-  						{{with .LoggedIn}}
   							<li><a href="/logout">Logout</a></li>
-  						{{end}}
 						</ul>
   					</div>
+  					{{end}}
 				</nav>
 			</header>
 
 			<section class="content">
 				{{template "index" .}}
 			</section>
-			
+
 			<footer>
+				<p>&copy; CURT Manufacturing, LLC</p>
+			</footer>
+	<footer>
 				<p>Copyright &copy; 2013 CURT Manufacturing, LLC</p>
 				<p>Developed By: <a href="mailto:websupport@curtmfg.com" title="Support">CURT Web Support</a></p>
 			</footer>

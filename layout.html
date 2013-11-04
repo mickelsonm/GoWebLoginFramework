@@ -28,13 +28,11 @@
     					<a class="navbar-brand"><img src="/img/logo.png" alt="CURT Manufacturing, LLC"></a>
     					<p class="navbar-text">Web Framework</p>
   					</div>
-  					{{with .LoggedIn}}
   					<div class="collapse navbar-collapse navbar-ex1-collapse">
   						<ul class="nav navbar-nav navbar-right">
-  							<li><a href="/logout">Logout</a></li>
+  							{{with .LoggedIn}} <li><a href="/logout">Logout</a></li> {{end}}
 						</ul>
   					</div>
-  					{{end}}
 				</nav>
 			</header>
 

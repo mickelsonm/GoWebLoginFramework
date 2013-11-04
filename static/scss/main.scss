@@ -1,0 +1,62 @@
+@import "screen";
+@import "_media-queries";
+@import "_mixins";
+@import "_functions";
+@import "_variables";
+@import "_classes";
+
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center text-align center,
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.btn:visited{
+	color:white;
+}
+
+body{
+	padding-top:70px;
+	.container{
+		.navbar{
+			.navbar-brand{
+				img{
+					width:115px;
+				}
+			}
+		}
+	}
+
+	footer{
+		margin-top:50px;
+	}
+}
+
+
+/* Bootstrap Overrides
+   ========================*/
+
+.modal{
+	.modal-dialog{
+		.modal-content{
+			.modal-body{
+				overflow-x: auto;
+			}
+		}
+	}
+}
+
+
+
+@include max-screen(768px){
+	body{
+		
+	}
+}

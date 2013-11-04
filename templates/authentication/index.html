@@ -1,0 +1,48 @@
+{{define "index"}}
+
+{{$errors := .Errors}}
+
+{{with .Heading}}
+<h2>{{.}}</h2>
+{{end}}
+
+<div class="row login-area">
+	{{with .Errors}}
+	<div class="col-lg-10">
+		<div class="panel panel-danger">
+			<div class="panel-heading">Authentication Error</div>
+			<ul>
+			{{range $i, $err := .}}
+				<li>{{$err}}</li>
+			{{end}}
+			</ul>
+		</div>
+	</div>
+	{{end}}
+	<div class="col-lg-6">
+		<form role="form" action="/login" method="post" class="form-horizontal">
+			{{with .Redirect}}
+			<input type="hidden" name="redirect" value="{{.}}">
+			{{end}}
+			<div class="form-group row">
+				<div class="col-lg-3">
+					<label for="email">Email</label>
+				</div>
+				<div class="col-lg-9">
+					<input type="email" name="email" class="form-control" id="email" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-lg-3">
+					<label for="password">Password</label>
+				</div>
+				<div class="col-lg-9">
+					<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+				</div>
+			</div>
+			<button class="btn btn-default btn-lg btn-action" type="submit">Sign In</button>
+		</form>
+	</div>
+</div>
+
+{{end}}

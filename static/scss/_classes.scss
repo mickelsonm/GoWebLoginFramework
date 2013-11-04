@@ -1,0 +1,50 @@
+/*
+	Helper Classes
+ */
+
+.orange{
+	color: $curt-orange;
+}
+
+.header_margin{
+	margin-top:40px;
+}
+
+.btn-action{
+	// @include linear-gradient(rgb(241,89,34), rgb(230,77,44));
+	// &:hover, &:focus, &:active{
+	// 	background-color:rgb(221,79,49);
+	// }
+}
+
+
+/*
+	Lifestyle Banners
+ */
+
+.basic_jumbotron{
+	background-size: 100% auto;
+	background-image:url("/img/lifestyles/truck.jpg") !important;
+}
+
+/*
+	Overrides
+	*/
+
+.table {
+	> thead{
+		> tr {
+			>th{
+				font-size:14px;
+				font-weight:bold;
+			}
+		}
+	}
+	> tbody {
+		> tr {
+			> td {
+				font-size:14px;
+			}
+		}
+	}
+}
